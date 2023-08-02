@@ -38,6 +38,7 @@ const scriptSrcUrls = [
     "https://kit.fontawesome.com/",
     "https://cdnjs.cloudflare.com/",
     "https://fastly.jsdelivr.net",
+    "https://cdn.jsdelivr.net",
 ];
 //This is the array that needs added to
 const styleSrcUrls = [
@@ -48,6 +49,7 @@ const styleSrcUrls = [
     "https://fonts.googleapis.com/",
     "https://use.fontawesome.com/",
     "https://fastly.jsdelivr.net",
+    "https://cdn.jsdelivr.net",
 
 ];
 const connectSrcUrls = [
