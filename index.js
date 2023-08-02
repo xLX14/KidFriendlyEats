@@ -51,6 +51,7 @@ const styleSrcUrls = [
 
 ];
 const connectSrcUrls = [
+    "https://fastly.jsdelivr.net",
     "https://api.mapbox.com/",
     "https://a.tiles.mapbox.com/",
     "https://b.tiles.mapbox.com/",
