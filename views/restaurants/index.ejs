@@ -1,0 +1,49 @@
+<% layout('layouts/boilerplate') %>
+
+    <div id="map" style="width: 100%; height: 500px;">
+
+    </div>
+
+    <h1>All Restaurants</h1>
+    <br>
+    <style>
+        .card {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+    </style>
+
+    <div class="row">
+        <% restaurants.forEach(restaurant=> { %>
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img crossorigin="anonymous" class="card-img-top rounded "
+                        src="<%= restaurant.image.length? restaurant.image[0].show : "" %>"
+                        alt="<%= restaurant.name %>">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%= restaurant.name %>
+                        </h5>
+                        <p class="card-text">
+                            <%= restaurant.description %>
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="/restaurants/<%= restaurant.id %>" class="btn btn-sm btn-outline-info">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% }); %>
+    </div>
+
+    <script>
+        const mapToken = '<%- process.env.MAPBOX_TOKEN %>';
+        const restaurants = { features:<%-  JSON.stringify(restaurants) %>}
+
+    </script>
+    <script src="/Javascripts/clusterMap.js"></script>

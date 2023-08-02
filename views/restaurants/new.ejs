@@ -1,0 +1,51 @@
+<% layout('layouts/boilerplate') %>
+
+    <h1 class="text-center">New Restaurant</h1>
+    <form action="/restaurants" class="needs-validation " method="post" novalidate enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input required type="text" class="form-control" id="name" name="restaurant[name]">
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="location" class="form-label">Location</label>
+            <input required type="text" class="form-control" id="location" name="restaurant[location]">
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="Image" class="form-label">Image Url</label>
+            <input required type="file" class="form-control" id="Image" name="image" multiple>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="price">Minimum Budget</label>
+            <div class="input-group ">
+                <span class="input-group-text" id="basic-addon1">$</span>
+                <input required name="restaurant[minimumprice]" type="text" class="form-control" placeholder="0.0"
+                    id="price" aria-label="price" aria-describedby="basic-addon3">
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="Description" class="form-label">Description</label>
+            <textarea required name="restaurant[description]" class="form-control" id="Description" rows="3"
+                name="restaurants[description]"></textarea>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-info mb-3">Add Restaurant</button>
+    </form>
+    <div>
+        <a href="/restaurants">Cancel</a>
+    </div>
